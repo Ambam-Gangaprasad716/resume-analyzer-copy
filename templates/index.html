@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="badge">THE #1 AI RESUME BUILDER</div>
+            <h1 class="hero-title">Create a Job-Ready<br>Resume in Minutes</h1>
+            
+            <div class="hero-actions">
+                <p class="hero-subtitle">Create your resume effortlessly with our cutting-edge AI<br>analyzer and beautiful templates.</p>
+                <button onclick="window.location.href='/analyze'" class="btn btn-primary btn-large">Build My Resume</button>
+            </div>
+            
+            <div class="social-proof">
+                <div class="avatars">
+                    <img src="https://i.pravatar.cc/100?img=11" alt="User">
+                    <img src="https://i.pravatar.cc/100?img=12" alt="User" style="margin-left:-10px;">
+                    <img src="https://i.pravatar.cc/100?img=13" alt="User" style="margin-left:-10px;">
+                </div>
+                <p>Deny, Intan and <strong>hundreds of thousands</strong> of<br>other people have succeeded to get hired and<br>accelerated their careers with Pix Resume.</p>
+            </div>
+        </div>
+
+        <div class="hero-visuals">
+            <!-- Mock Floating Elements -->
+            <div class="mock-card mock-website">
+                <div class="mock-header">
+                    <div class="mock-logo"></div>
+                    <div>
+                        <div class="mock-title">Your Resume Website</div>
+                        <div class="mock-link">www.pixresume.com/valeria-gatti</div>
+                    </div>
+                </div>
+                <button class="mock-btn"><i class="fa-solid fa-share"></i> Share</button>
+            </div>
+
+            <div class="mock-phone phone-back">
+                <div class="dynamic-island"></div>
+                <div class="phone-content">
+                    <div class="mock-hero-img"></div>
+                    <div class="mock-line bold"></div>
+                    <div class="mock-line"></div>
+                </div>
+                <div class="phone-cta">Build a Professional<br>Resume for Free</div>
+                <div class="mock-btn-blue">Get Started</div>
+            </div>
+
+            <div class="mock-phone phone-front">
+                <div class="dynamic-island"></div>
+                <div class="phone-content text-heavy">
+                    <div class="mock-avatar"></div>
+                    <div class="mock-line bold w-50"></div>
+                    <div class="mock-line w-70"></div>
+                    <div style="margin-top:15px"></div>
+                    <div class="mock-line"></div>
+                    <div class="mock-line w-90"></div>
+                    <div class="mock-line w-80"></div>
+                    <div class="mock-line"></div>
+                    <div class="mock-button-floating"><i class="fa-solid fa-plus"></i></div>
+                </div>
+            </div>
+
+            <div class="mock-card mock-job">
+                <div class="job-icon green"><i class="fa-solid fa-check"></i></div>
+                <div class="job-title">Dream Job</div>
+                <div class="job-company">Company Name</div>
+                <div class="job-tags">
+                    <span>Full-time</span>
+                    <span>Remote</span>
+                    <span>Product</span>
+                </div>
+                <div class="mock-line max"></div>
+                <div class="mock-line max w-80"></div>
+                <div class="job-salary">$5,500</div>
+            </div>
+        </div>
+    </main>
+
+    <section class="features-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Why Choose Pix Resume?</h2>
+                <p>We provide the tools you need to stand out from the crowd and land the job of your dreams.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>AI Resume Analysis</h3>
+                    <p>Our intelligent system scans your resume, extracts your core skills, and predicts your job readiness in seconds.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h3>Professional Templates</h3>
+                    <p>Choose from a variety of ATS-friendly templates designed by industry experts and HR professionals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Score & Analytics</h3>
+                    <p>Get a detailed benchmark score on your resume's effectiveness, along with actionable improvements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>3 Steps To Your Dream Job</h2>
+                <p>Creating a professional resume has never been this simple.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Upload & Analyze</h3>
+                    <p>Upload your existing PDF resume or start from scratch using our builder to establish a baseline.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Get Instant Feedback</h3>
+                    <p>Review the AI-generated assessment, which highlights missing crucial skills for your target role.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Export & Apply</h3>
+                    <p>Edit your newly optimized profile directly in our tool and export a brand-new ATS-ready PDF.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Loved By Professionals</h2>
+                <p>Don't just take our word for it. See what our successful users have to say.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">"Pix Resume completely transformed my job search. After optimizing my resume with their analyzer, my callback rate doubled. Highly recommended!"</p>
+                    <div class="user-info">
+                        <img src="https://i.pravatar.cc/100?img=33" alt="Sarah J.">
+                        <div>
+                            <h4>Sarah Jenkins</h4>
+                            <span>Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="quote">"The easiest and most modern resume builder I've ever used. The AI skill detection is surprisingly accurate and gave me great role insights."</p>
+                    <div class="user-info">
+                        <img src="https://i.pravatar.cc/100?img=15" alt="Mark D.">
+                        <div>
+                            <h4>Mark Davis</h4>
+                            <span>Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="quote">"I was struggling to switch careers, but the specific targeted suggestions from the Pix Analyzer really bridged the gap in my profile."</p>
+                    <div class="user-info">
+                        <img src="https://i.pravatar.cc/100?img=47" alt="Elena R.">
+                        <div>
+                            <h4>Elena Rodriguez</h4>
+                            <span>Data Analyst</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Elevate Your Career?</h2>
+            <p>Join thousands of professionals landing better jobs.</p>
+            <button onclick="window.location.href='/analyze'" class="btn btn-primary btn-large cta-btn">Get Started For Free</button>
+        </div>
+    </section>
+{% endblock %}

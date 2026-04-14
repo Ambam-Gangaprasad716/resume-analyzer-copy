@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}AI Resume Analyzer - The #1 Resume Tool{% endblock %}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="{% block body_class %}landing-page{% endblock %}">
+    <nav class="top-nav">
+        <div class="logo">
+            <a href="/" style="text-decoration: none; color: inherit;">
+                <span class="logo-accent">Pix</span> Resume
+            </a>
+        </div>
+        <div class="nav-links">
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Resume <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="/resume/templates">Resume Templates</a>
+                    <a href="/resume/examples">Resume Examples</a>
+                    <a href="/resume/format-guide">Format Guide</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Resources <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="/resources/blog">Blog</a>
+                    <a href="/resources/help-center">Help Center</a>
+                    <a href="/resources/podcast">Podcast</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Premium <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="/premium/pricing">Pricing</a>
+                    <a href="/premium/resume-review">Resume Review</a>
+                    <a href="/premium/coaching">Carrier Coaching</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Career Advice <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="/career/cover-letters">Cover Letters</a>
+                    <a href="/career/interview-prep">Interview Prep</a>
+                    <a href="/career/job-search">Job Search Strategies</a>
+                </div>
+            </div>
+            <a href="/faq">FAQ</a>
+        </div>
+        <div class="auth-buttons">
+            <a href="#" class="btn-text">Login</a>
+            <a href="#" class="btn btn-outline">Register</a>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <span class="logo-accent">Pix</span> Resume
+                </div>
+                <p class="text-muted">The #1 resume builder that helps you land your dream job faster. Create professional resumes easily.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Resume Basics</h4>
+                <ul>
+                    <li><a href="/resume/templates">Templates</a></li>
+                    <li><a href="/resume/examples">Examples</a></li>
+                    <li><a href="/resume/format-guide">Format Guide</a></li>
+                    <li><a href="/analyze">Free Analyzer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="/premium/pricing">Pricing</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/resources/help-center">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pix Resume. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

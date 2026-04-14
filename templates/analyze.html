@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Analyze Resume - Pix Resume{% endblock %}
+
+{% block body_class %}app-page{% endblock %}
+
+{% block content %}
+    <div class="app-container">
+        <div class="card form-card">
+            <h2 class="card-title">Analyze Your Resume</h2>
+            <p class="text-muted" style="margin-bottom: 20px;">Upload a PDF to instantly extract skills and calculate your job-readiness score.</p>
+            
+            {% if error %}
+            <div class="alert error-box">
+                <i class="fa-solid fa-triangle-exclamation"></i> {{ error }}
+            </div>
+            {% endif %}
+
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="resume" required accept=".pdf" class="file-input">
+                <button type="submit" class="btn btn-primary w-100" style="margin-top: 15px;">Analyze Now</button>
+            </form>
+        </div>
+
+        {% if text %}
+        <div class="results-grid">
+            
+            <div class="card stat-card main-stat">
+                <div class="stat-icon"><i class="fa-solid fa-bullseye"></i></div>
+                <div class="stat-info">
+                    <p class="stat-label">Best Fit Role</p>
+                    <h3 class="stat-value">{{ role }}</h3>
+                </div>
+            </div>
+
+            <div class="card stat-card">
+                <div class="stat-icon blue"><i class="fa-solid fa-chart-pie"></i></div>
+                <div class="stat-info">
+                    <p class="stat-label">Match Score</p>
+                    <h3 class="stat-value">{{ score }}%</h3>
+                </div>
+                <div class="progress-bar mini">
+                    <div class="progress" style="width: {{ score }}%"></div>
+                </div>
+            </div>
+
+            <div class="card wide-card">
+                <h3 class="card-title">Detected Skills</h3>
+                <div class="tags-container">
+                    {% for skill in skills %}
+                        <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                    {% if not skills %}
+                        <p class="text-muted">No relevant skills found.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card wide-card">
+                <h3 class="card-title">Extracted Text Preview</h3>
+                <div class="text-scroll">
+                    <p>{{ text }}</p>
+                </div>
+            </div>
+
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}
